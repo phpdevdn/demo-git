@@ -1,0 +1,39 @@
+$pc_width_large : 1600px;
+$pc_width_min : 1025px;
+$tb_width_max : 1024px;
+$tb_width_min : 768px;
+$sp_width_max : 767px;
+$sp_width_portrait : 360px;
+@mixin breakpoint($point) {
+	@if $point == desktop-large {
+		@media screen and (min-width: $pc_width_large) { 
+			@content ; 
+		}
+	}
+	@if $point == desktop {
+		@media screen and (min-width: $pc_width_min) { 
+			@content ; 
+		}
+	}	
+	@else if $point == tablet {
+		@media screen and (max-width: $tb_width_max) { 
+			@content ; 
+		}
+	}
+	@else if $point == only-tablet{
+		@media screen and (max-width:$tb_width_max) and (min-width:$tb_width_min){
+			@content;
+		}
+	}
+	@else if $point == mobile {
+		@media screen and (max-width: $sp_width_max)  { 
+			@content ; 
+		}
+	}
+	@else if $point == mobile-portrial {
+		@media screen and (max-width: $sp_width_portrait)  { 
+			@content ; 
+		}
+	}
+
+}
