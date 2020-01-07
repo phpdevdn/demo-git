@@ -1,0 +1,35 @@
+$frm_border_color : #ddd;
+.olform{
+    input,select,textarea,button{
+        font-family: inherit;
+        width:100%;
+        margin: 0.5rem 0;
+        padding: 0.7rem 0.7rem;
+        height:2.5rem;
+        line-height: 2;     
+        font-size : 1rem;
+        border : 1px solid $frm_border_color;
+        outline :none;
+    }
+    textarea{
+        height:80px;
+    }
+    input[type="submit"]{
+        display: inline-block;
+        min-width: 100px;
+        width:auto;
+    }
+    input[type="checkbox"]{
+        display: inline-block;
+        vertical-align: baseline;
+        border-radius:0;
+    }
+    input[type="radio"]{
+        display: inline-block;
+        vertical-align: baseline;
+    }
+
+}
+
+
+

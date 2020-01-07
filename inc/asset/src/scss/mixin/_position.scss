@@ -1,0 +1,8 @@
+@mixin position_overlay($z:9){
+    position: absolute;
+    z-index: $z;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;	
+}

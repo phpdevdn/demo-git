@@ -1,0 +1,268 @@
+.bl-tiny{
+    display:inline-block;
+    width:70%;
+    position:relative; 
+    padding:0;
+    max-height:150px;
+    overflow:hidden;
+  
+    padding-top:30px; 
+}
+.bl-tiny .tiny-ct{
+   background:#f3f3f3;
+   border:2px solid #eee;
+   padding:10px
+}
+
+.tiny-ct h2,.tiny-ct h3 {
+    margin: 0;
+    line-height: 1.5;
+}
+.bl-tiny .area-tiny{
+    display:none;
+}
+.bl-tiny .tiny-edit{
+    position:absolute;
+    top:0;
+    right:0;
+}
+#pop-tiny{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.84);
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+
+#pop-tiny.active {
+    display: block;
+}
+
+#pop-tiny .pop-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px 20px 0;
+    margin: 50px auto 0;
+}
+
+.pop-inner .txt-rgt {
+    text-align: right;
+    margin-top: 0;
+}
+
+.pop-inner .cls-pop {
+    cursor: pointer;
+    color: #f00;
+    font-size: 26px;
+    line-height: 1;
+}
+/*end-popup-tiny*/
+.slide-fr {
+    display: block;
+    border:1px solid #aaa;
+    padding:10px;
+    margin:10px 0;
+    position: relative;
+    cursor: move;
+}
+
+.slide-fr .fr-del:hover {
+    opacity: 0.7;
+}
+
+.slide-fr .fr-del {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 23px;
+    box-shadow: 0 0 1px #aaa,1px 1px 1px #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.slide-fr .fr-cll {
+    position: absolute;
+    top: 46px;
+    right: 8px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+    transition: all ease-in 0.3s;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.slide-fr .fr-cll:hover {
+    opacity: 0.8;
+}
+
+.slide-fr .fr-cll.active {
+    transform: rotateZ(180deg);
+}
+
+.slide-fr:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.slide-fr img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 0;
+    background: #eee;
+    background-size: 100px 100px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.slide-fr .bl-img {
+    width: 200px;
+    float: left;
+    text-align: center;
+}
+
+.slide-fr .fr-bg {
+    width: 180px;
+    background-size: 100% 100%;
+}
+
+.slide-fr .input-gr {
+    display: block;
+    margin: 11px 20px;
+    width: auto;
+}
+
+.input-gr input,.input-gr textarea {
+    min-width: 70%;
+}
+
+.input-gr label {
+    display: inline-block;
+    width: 86px;
+    text-align: left;
+    vertical-align: top;
+}
+/*multiple image*/
+.drap-bl{}
+
+.image-bl {
+    border: 1px solid #ddd;
+    padding: 5px;
+    min-height: 100px;
+}
+
+.image-bl.image-celeb {
+    min-height: 250px;
+}
+
+.image-bl.image-celeb .item {
+    height: 120px;
+    background: #eee;
+}
+.item{
+    position: relative;
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    padding: 20px 5px 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: move;
+    margin: 0;
+    vertical-align: text-bottom;
+}
+
+.drap-list .item {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 5px 25px 5px 45px;
+    border-bottom: 1px dotted;
+}
+
+.drap-list .item .img-ite {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+}
+
+.image-bl .item {
+    height: 100px;
+}
+
+.image-bl .inp-txt {
+    width: 100%;
+    box-sizing: border-box;
+}
+.image-fs .item{
+    height:120px;
+}
+.tit-ite{
+    margin: 0 0 3px;
+    height: 20px;
+    overflow: hidden;
+}
+.img-ite{
+    max-width: 100%;
+    height: 50px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.del-ite{
+    position: absolute;
+    top: 0;
+    right: 1px;
+    border: none;
+    margin: 0;
+    padding: 2px;
+    background: 0 0;
+    color: #b4b9be;
+    cursor: pointer;
+    top: 0;
+    z-index: 999;
+}
+
+.sel-dis-bl .del-ite {
+    top: 26px;
+}
+
+.drap-list .del-ite {
+    top: 5px;
+    right: 0;
+}
+.del-ite:hover:before{
+    color: #333;
+}
+.del-ite:before{
+    background: 0 0;
+    color: #f00;
+    content: "\f153";
+    display: block;
+    font: 400 20px/20px dashicons;
+    speak: none;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
