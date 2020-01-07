@@ -1,7 +1,16 @@
-<?php get_header(); ?>
+<?php 
+	get_header(); 
+	$search_key = get_search_query();
+?>
 <section class="wrap archive">
 	<div class="container">
-		<div class="bl_con posts">
+		<header class="bl_hd archive-hd">
+			<p class="title">
+				<span>search result for :</span> 
+				<span><?php echo $search_key ?></span>
+			</p>		
+		</header>
+		<div class="bl_ct posts">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part('content'); ?>
 			<?php endwhile; ?>
@@ -12,4 +21,4 @@
 		</div>		
 	</div>
 </section>
-<?php get_footer(); ?>
+<?php get_footer() ?>

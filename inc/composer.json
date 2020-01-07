@@ -1,0 +1,13 @@
+{
+    "name": "oltheme/inc",
+    "require": {},
+    "autoload":{
+    	"psr-4":{
+    		"OlTheme\\":"src/"
+    	},
+    	"files":[]
+    },
+	"config": {
+	    "optimize-autoloader": true
+	}     
+}

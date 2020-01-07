@@ -1,7 +1,13 @@
 <?php get_header(); ?>
 <section class="wrap archive">
 	<div class="container">
-		<div class="bl_con posts">
+		<header class="archive-hd">
+			<?php
+				the_archive_title( '<h2 class="archive-tit">', '</h2>' );
+				the_archive_description( '<p class="archive-desc">', '</p>' );
+			?>		
+		</header>
+		<div class="posts">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part('content'); ?>
 			<?php endwhile; ?>
@@ -12,4 +18,4 @@
 		</div>		
 	</div>
 </section>
-<?php get_footer(); ?>
+<?php get_footer() ?>
