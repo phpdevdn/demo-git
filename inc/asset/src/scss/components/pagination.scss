@@ -1,0 +1,11 @@
+.page-numbers{
+	> li{
+	    display: inline-block;
+	    > a, > span{
+		    display: block;
+		    line-height: 1;
+		    padding:5px;
+		    margin:5px 0;	    	
+	    }
+	}
+}

@@ -1,0 +1,60 @@
+@mixin display_flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+$flex_sum :12; 
+//
+@mixin flex_column($name){
+  $pre : if($name != "","-"+$name,"");
+  @for $i from 1 through $flex_sum {
+    $w_item : (($i/$flex_sum) - 0.01) * 100%; 
+    .flex_col#{$pre}-#{$i}{
+      width:#{$w_item};
+      margin : 0;
+      float:left;
+      padding:0;
+    }
+  } 
+}
+.flex{
+	@include display_flex();
+	width:100%;
+}
+.flex_row{
+	@include display_flex();
+	width:auto;
+	margin : 0;
+	padding:0;
+	flex-flow:row wrap;
+	justify-content:space-between;	
+}
+.flex_reverse{
+	flex-direction: row-reverse;
+}
+@include breakpoint('desktop'){
+	@include flex_column("");
+}  
+@include breakpoint('only-tablet'){
+	@include flex_column("sm");
+}  
+@include breakpoint('mobile'){
+	@include flex_column("xs");
+}   

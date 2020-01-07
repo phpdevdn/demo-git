@@ -1,0 +1,32 @@
+$nav_active_color : #32373c;
+//
+#nav_black{
+    background: $clr_black;
+    font-size: 0;
+    margin: 10px 0 0;
+}
+ul.ls_nav{
+    //
+    > li{
+        display: inline-block;
+        margin: 0;
+        //
+        > a{
+            text-decoration: none;
+            font-size: 1rem;
+            line-height: 2;
+            padding: $pd_small $pd_medium;
+            display: block;
+            border-left: 1px solid $nav_active_color;
+            color: #fff;
+            //
+            &:first-child{
+                border-left:none;
+            }
+            &.active,&:hover{
+                background: $nav_active_color;
+                color: #fff;                
+            }
+        }        
+    }
+}

@@ -1,0 +1,1 @@
+<p class="no_post">Not posts!</p>

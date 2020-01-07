@@ -1,0 +1,15 @@
+@mixin css3($property, $value) {
+	@each $prefix in -webkit-, -moz-,'' {
+	#{$prefix}#{$property}: $value;
+	}
+}
+@mixin transform($value) {
+	@each $prefix in -ms-,-webkit-, -moz-,'' {
+	#{$prefix}transform: #{$value};
+	}
+}
+@mixin transition($value) {
+	@each $prefix in -ms-,-webkit-, -moz-,'' {
+	#{$prefix}transition: #{$value};
+	}
+}

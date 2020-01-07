@@ -1,0 +1,173 @@
+.olpop-post * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.olpop-post{
+    /* position:fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* background: #ffffff17; */
+    /* width:100%; */
+    /* height:100%; */
+    /* z-index: 99999; */
+    display: none;
+}
+
+.olpop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(173, 173, 173, 0.1);
+    z-index: 9998;
+}
+
+.olpop-tab-ct {
+    display: none;
+}
+
+.olpop-tab-ct.active {
+    display: block;
+}
+
+.olpop-post .ft {
+    padding: 5px 5px;
+    background: #fff;
+}
+
+.olpop-post .ft:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.olpop-post .olpop-close {
+    float: right;
+}
+
+.olpop-post .lst-posts {
+    height: 241px;
+    overflow-y: scroll;
+    padding: 5px;
+    background: #fff;
+}
+
+.olpop-post .olpop-sea .lst-posts {
+    height: 210px;
+}
+
+.lst-posts .ite-post {
+    border: 1px solid #ddd;
+    padding: 3px;
+    margin: 0 0 5px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.lst-posts .ite-post p {
+    margin: 0;
+}
+
+.lst-posts .ite-post:hover {
+    background: #eee;
+}
+.olpop-post-ct{
+    position: absolute;
+    top:50%;
+    left:50%;
+    background:#fff;
+    width:200px;
+    height: 315px;
+    box-shadow: 1px 2px 1px 1px #e4e4e4;
+    z-index: 9999;
+}
+
+.olpop-post-ct .fr-sea {
+    position: relative;
+    padding: 0 35px 0 5px;
+    margin: 0 0 5px;
+}
+
+.olpop-post-ct .fr-sea .olpop-key {
+    width: 100%;
+    line-height: 25px;
+    margin: 0;
+    display: block;
+}
+
+.olpop-find {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 100%;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px 0 0 0;
+}
+.olpop-post.active {
+    display: block;
+}
+.olpop-tab{
+    padding: 3px 5px;
+    margin: 0;
+}
+
+.olpop-tab li {
+    display: inline-block;
+}
+
+.olpop-tab li a {
+    padding: 5px;
+    line-height: 1;
+    color: #333;
+    display: block;
+    min-width: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.olpop-tab li a.active {
+    background: #3998dd;
+    color: #fff;
+}
+.ol-sel_post-wr{
+    width: 350px;
+    margin: 0 0 30px;
+}
+
+.ol-sel_post-results {
+    background: #eee;
+    padding: 5px;
+    height: 188px;
+    margin: 0 0 10px;
+    overflow: auto;
+}
+
+.ol-sel_post-act {
+    text-align: right;
+}
+
+.ol-sel_post-results > .item {
+    background: #fff;
+    position: relative;
+    margin: 5px 0;
+    padding: 5px 20px 5px 5px;
+}
+
+.ol-sel_post-results > .item > p {
+    margin: 0;
+}
+
+.item > .item-del {
+    color: #f00;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
